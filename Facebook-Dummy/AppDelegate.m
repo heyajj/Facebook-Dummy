@@ -26,32 +26,42 @@
     NewsFeedViewController *newsfeedVC = [[NewsFeedViewController alloc] init];
     
     UINavigationController *newsfeedNC = [[UINavigationController alloc] initWithRootViewController:newsfeedVC];
-    newsfeedVC.tabBarItem.title = @"First";
-    newsfeedVC.tabBarItem.image = [UIImage imageNamed:@"House"];
+    newsfeedVC.tabBarItem.title = @"News Feed";
+    newsfeedVC.tabBarItem.image = [UIImage imageNamed:@"News_Feed.png"];
     
     
     RequestViewController *requestVC = [[RequestViewController alloc] init];
     
     UINavigationController *requestNC = [[UINavigationController alloc] initWithRootViewController:requestVC];
-    requestVC.tabBarItem.title = @"Second";
-    requestVC.tabBarItem.image = [UIImage imageNamed:@"House"];
+    requestVC.tabBarItem.title = @"Requests";
+    requestVC.tabBarItem.image = [UIImage imageNamed:@"Requests.png"];
 
     
-    
-    
     MessagesViewController *messagesVC = [[MessagesViewController alloc] init];
+    
+    UINavigationController *messagesNC = [[UINavigationController alloc] initWithRootViewController:messagesVC];
+    messagesVC.tabBarItem.title = @"Messages";
+    messagesVC.tabBarItem.image = [UIImage imageNamed:@"tab_messages.png"];
+
+    
     NotificationsViewController *notificationsVC = [[NotificationsViewController alloc] init];
+    
+    UINavigationController *notificationsNC = [[UINavigationController alloc] initWithRootViewController:notificationsVC];
+    notificationsVC.tabBarItem.title = @"Notifications";
+    notificationsVC.tabBarItem.image = [UIImage imageNamed:@"tab_notifications.png"];
+    
     SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
     
+    UINavigationController *settingsNC = [[UINavigationController alloc] initWithRootViewController:settingsVC];
+    settingsVC.tabBarItem.title = @"Settings";
+    settingsVC.tabBarItem.image = [UIImage imageNamed:@"tab_settings.png"];
+
+    
     // Configure the tab bar controller with the five navigation controllers
-    tabBarController.viewControllers = @[newsfeedNC, requestNC, messagesVC, notificationsVC, settingsVC];
+    tabBarController.viewControllers = @[newsfeedNC, requestNC, messagesNC, notificationsNC, settingsNC];
     
     
     self.window.rootViewController = tabBarController;
-    
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

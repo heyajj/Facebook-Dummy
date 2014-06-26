@@ -34,8 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.newsFeedScrollView.contentSize = CGSizeMake(320, 1000);
-    
+    self.newsFeedScrollView.contentSize = CGSizeMake(320, 1025);
     self.navigationItem.title = @"News Feed";
 }
 
@@ -48,7 +47,7 @@
 
 - (IBAction)onBannerTap:(id)sender {
     self.bannerView.center = CGPointMake(self.bannerView.center.x, -50);
-     self.homeFeedImageView.center = CGPointMake(self.homeFeedImageView.center.x, 200);
+     self.homeFeedImageView.center = CGPointMake(self.homeFeedImageView.center.x, 347);
     
 }
 

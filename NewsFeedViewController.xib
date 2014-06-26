@@ -33,13 +33,13 @@
                             </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_feed" id="Lyh-LF-wvV">
-                            <rect key="frame" x="0.0" y="59" width="320" height="635"/>
+                            <rect key="frame" x="0.0" y="59" width="320" height="694"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                     </subviews>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.8876128277251969" green="0.89006903339892018" blue="0.89267791970802923" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
