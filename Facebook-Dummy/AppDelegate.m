@@ -7,13 +7,52 @@
 //
 
 #import "AppDelegate.h"
+#import "RequestViewController.h"
+#import "NewsFeedViewController.h"
+#import "MessagesViewController.h"
+#import "NotificationsViewController.h"
+#import "SettingsViewController.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    
+    // Create the tab bar controller
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    NewsFeedViewController *newsfeedVC = [[NewsFeedViewController alloc] init];
+    
+    UINavigationController *newsfeedNC = [[UINavigationController alloc] initWithRootViewController:newsfeedVC];
+    newsfeedVC.tabBarItem.title = @"First";
+    newsfeedVC.tabBarItem.image = [UIImage imageNamed:@"House"];
+    
+    
+    RequestViewController *requestVC = [[RequestViewController alloc] init];
+    
+    UINavigationController *requestNC = [[UINavigationController alloc] initWithRootViewController:requestVC];
+    requestVC.tabBarItem.title = @"Second";
+    requestVC.tabBarItem.image = [UIImage imageNamed:@"House"];
+
+    
+    
+    
+    MessagesViewController *messagesVC = [[MessagesViewController alloc] init];
+    NotificationsViewController *notificationsVC = [[NotificationsViewController alloc] init];
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+    
+    // Configure the tab bar controller with the five navigation controllers
+    tabBarController.viewControllers = @[newsfeedNC, requestNC, messagesVC, notificationsVC, settingsVC];
+    
+    
+    self.window.rootViewController = tabBarController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    return YES;
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
