@@ -24,10 +24,12 @@
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     NewsFeedViewController *newsfeedVC = [[NewsFeedViewController alloc] init];
+   
     
     UINavigationController *newsfeedNC = [[UINavigationController alloc] initWithRootViewController:newsfeedVC];
     newsfeedVC.tabBarItem.title = @"News Feed";
     newsfeedVC.tabBarItem.image = [UIImage imageNamed:@"News_Feed.png"];
+    UIImage *newsFeedImage = [[UIImage imageNamed:@"News_Feed"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     
     RequestViewController *requestVC = [[RequestViewController alloc] init];

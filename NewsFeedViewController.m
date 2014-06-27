@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *homeFeedImageView;
 
 
+
 - (IBAction)onBannerTap:(id)sender;
 
 @end
@@ -36,6 +37,7 @@
     
     self.newsFeedScrollView.contentSize = CGSizeMake(320, 1025);
     self.navigationItem.title = @"News Feed";
+
 }
 
 
