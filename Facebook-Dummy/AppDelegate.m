@@ -25,7 +25,6 @@
     
     NewsFeedViewController *newsfeedVC = [[NewsFeedViewController alloc] init];
    
-    
     UINavigationController *newsfeedNC = [[UINavigationController alloc] initWithRootViewController:newsfeedVC];
     newsfeedVC.tabBarItem.title = @"News Feed";
     //newsfeedVC.tabBarItem.image = [UIImage imageNamed:@"News_Feed.png"];
